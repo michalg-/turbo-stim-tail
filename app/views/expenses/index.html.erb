@@ -1,0 +1,26 @@
+<% if notice.present? %>
+  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+    <%= notice %>
+  </p>
+<% end %>
+
+<div class='mt-4'>
+  <%= render 'form', expense: expense %>
+</div>
+<div id="expenses">
+  <div data-controller="expenses">
+    <div class="table w-full">
+      <div class="table-header-group">
+        <div class="table-row">
+          <div class="table-cell p-2 text-left">Name</div>
+          <div class="table-cell p-2 text-left">Paid</div>
+          <div class="table-cell p-2 text-left">Value</div>
+          <div class="table-cell p-2 text-left">Actions</div>
+        </div>
+      </div>
+      <div class="table-row-group">
+        <%= render expenses %>
+      </div>
+    </div>
+  </div>
+</div>
